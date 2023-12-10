@@ -26,6 +26,15 @@
 
        Важно : Если решаем идти по узлам с корня документа, то идем только по кратчайшему пути
       */
+      const main = document.getElementById("target");
+      const maiByTag = document.getElementsByTagName("main")[0];
+      const mainByClass = document.getElementsByClassName("target")[0];
+      const mainByQuery = document.querySelector("#target");// или вызвать с классом ".target";
+      const mainByQueryAll = document.querySelectorAll("#target")[0] // или вызвать с классом ".target";
+      //[0] добавил чтобы вывести сам элемент из коллекций
+      //можно через sibling & parentElement, но считаю это костылем тк если поменяется структура, то все просто рухнет))
+
+      console.log(main, maiByTag,mainByClass, mainByQuery, mainByQueryAll);
     </script>
   </body>
 </html>
