@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main id="target" class="target" name="target"></main>
+    <article></article>
+    <footer></footer>
+    <script>
+      /*
+       Необходимо найти и записать в переменную узел-элемент <main></main> всеми возможными способами
+
+       Например : 
+
+       const main1 = "Ваш код"
+       console.log('main1', main1);  // output: "main1" <main id="target" class="target" name="target"></main>
+
+       const main2 = ...
+       console.log('main2', main2);  // output: "main2" <main id="target" class="target" name="target"></main>
+
+       и т. д.
+
+       Важно : Если решаем идти по узлам с корня документа, то идем только по кратчайшему пути
+      */
+      const main = document.getElementById("target");
+      const maiByTag = document.getElementsByTagName("main")[0];
+      const mainByClass = document.getElementsByClassName("target")[0];
+      const mainByQuery = document.querySelector("#target");// или вызвать с классом ".target";
+      const mainByQueryAll = document.querySelectorAll("#target")[0] // или вызвать с классом ".target";
+      //[0] добавил чтобы вывести сам элемент из коллекций
+      //можно через sibling & parentElement, но считаю это костылем тк если поменяется структура, то все просто рухнет))
+
+      console.log(main, maiByTag,mainByClass, mainByQuery, mainByQueryAll);
+    </script>
+  </body>
+</html>
